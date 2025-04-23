@@ -3,8 +3,8 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 // Define routes that need authentication
-const protectedRoutes = ["/dashboard", "/favorites", "/practice"];
-// const protectedRoutes = [];
+// const protectedRoutes = ["/dashboard", "/favorites", "/practice"];
+const protectedRoutes = [];
 
 export async function middleware(req: NextRequest) {
 	const res = NextResponse.next();

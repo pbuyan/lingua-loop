@@ -1,18 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Dialogue, DialogueLine, PracticeMode } from "@/types";
+import type { Dialogue, PracticeMode } from "@/types";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-	Heart,
-	HeartOff,
-	Play,
-	Save,
-	RefreshCw,
-	Mic,
-	MicOff,
-} from "lucide-react";
+import { Heart, HeartOff, Play, RefreshCw, Mic, MicOff } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import PracticeTimer from "./PracticeTimer";
 

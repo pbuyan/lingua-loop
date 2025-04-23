@@ -1,9 +1,8 @@
 import { NextResponse } from "next/server";
 import { generateDialogue } from "@/lib/ai";
-import { supabase } from "@/lib/supabase";
 import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import { DialoguePrompt } from "@/types";
+import type { DialoguePrompt } from "@/types";
 
 export async function POST(request: Request) {
 	try {

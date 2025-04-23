@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/lib/supabase";
-import { User } from "@supabase/supabase-js";
+import type { User } from "@supabase/supabase-js";
 
 interface UserProfileProps {
 	user: User;
@@ -46,13 +46,18 @@ export default function UserProfile({ user }: UserProfileProps) {
 
 			<div className="space-y-4">
 				<div>
-					<label className="block text-sm font-medium mb-1">Email</label>
-					<Input value={user.email} disabled />
+					<label className="block text-sm font-medium mb-1" htmlFor="email">
+						Email
+					</label>
+					<Input name="email" value={user.email} disabled />
 				</div>
 
 				<div>
-					<label className="block text-sm font-medium mb-1">Display Name</label>
+					<label className="block text-sm font-medium mb-1" htmlFor="name">
+						Display Name
+					</label>
 					<Input
+						name="name"
 						value={name}
 						onChange={(e) => setName(e.target.value)}
 						placeholder="Enter your name"

@@ -1,4 +1,4 @@
-import { UserStats as UserStatsType } from "@/types";
+import type { UserStats as UserStatsType } from "@/types";
 
 interface UserStatsProps {
 	stats: UserStatsType | null;
