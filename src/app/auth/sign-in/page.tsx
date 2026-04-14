@@ -19,7 +19,7 @@ export default async function SignIn() {
 		<div className="max-w-md mx-auto bg-white p-8 rounded-lg shadow">
 			<h1 className="text-2xl font-bold mb-6">Sign In</h1>
 
-			<form action="/auth/sign-in" method="post" className="space-y-4">
+			<form action="/auth/sign-in/submit" method="post" className="space-y-4">
 				<div>
 					<label htmlFor="email" className="block text-sm font-medium mb-1">
 						Email
